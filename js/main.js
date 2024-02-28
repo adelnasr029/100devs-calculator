@@ -5,6 +5,11 @@ let operator = ''
 let display = ''
 
 document.querySelector('#clickZone').addEventListener('click', displayCalc)
+function displayCalc(){
+    display = num1 + operator + num2
+
+    document.querySelector('#placeToPutEquation').innerHTML = display
+}
 
 
 document.querySelector('#zero').addEventListener('click', zero)
@@ -118,11 +123,6 @@ function nine(){
     }
 }
 
-function displayCalc(){
-    display = num1 + operator + num2
-
-    document.querySelector('#placeToPutEquation').innerHTML = display
-}
 
 function equals(){
     if(operator === '+'){
@@ -146,6 +146,59 @@ function clear(){
     operator = ''
     document.querySelector('#placeToPutResult').innerHTML = total
     document.querySelector('#placeToPutEquation').innerHTML = 0
-
-
 }
+
+// let num1 = ''
+// let num2 = ''
+// let operator = ''
+// let display = ''
+
+//function that reassignes num1 & num2
+//function that rassignes the operator 
+//function that reassignes the display and display it onto screen
+//function that reassignes the total by operating the 2 num
+// function zero(){
+//     num1 == ''? num1 += '0' : num2 += '0'
+// }
+
+// function one(){
+//     num1 == ''? num1 += '1' : num2 += '1'
+// }
+// function two(){
+//     num1 == ''? num1 += '2' : num2 += '2'
+// }
+
+// function plus(){
+//     operator = '+'
+// }
+// function minus(){
+//     operator = '-'
+// }
+// function multiply(){
+//     operator = '*'
+// }
+// function divide(){
+//     operator = '/'
+// }
+
+// function displayCalc(){
+//     display = num1 + operator + num2
+//     document.querySelector('#placeToPutEquation').innerHTML = display
+// }
+
+// function equals(){
+//     operator == '+'? total = Number(num1) + Number(num1) :
+//     operator == '-'? total = Number(num1) - Number(num1) :
+//     operator == '*'? total = Number(num1) * Number(num1) :
+//     operator == '/'? total = Number(num1) / Number(num1) : 'error404'
+//     document.querySelector('#placeToPutResult').innerHTML = total
+// }
+
+// function clear(){
+//      num1 = ''
+//      num2 = ''
+//      operator = ''
+//      total = 0
+//     document.querySelector('#placeToPutEquation').innerHTML = 0
+//     document.querySelector('#placeToPutResult').innerHTML = total
+// }
